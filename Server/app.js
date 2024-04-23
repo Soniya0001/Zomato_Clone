@@ -15,8 +15,8 @@ const Route = require("./Route/index");
 //     optionSuccessStatus: 200
 // };
 const corsOptions = {
-    origin: ['http://localhost:3000'],
-    // origin: process.env.REACT_URL,
+   // origin: ['http://localhost:3000'],
+     origin: 0.0.0.0,
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     optionSuccessStatus: 200,
@@ -26,7 +26,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 const Port = process.env.PORT || 5500;
-const hostname = "localhost";
+// const hostname = "localhost";
+const hostname = "0.0.0.0";
 const paymentRoute = require("./Controller/payment");
 const  authRoute = require("./Controller/auth");
 const passportSetup = require("./Controller/passport")
