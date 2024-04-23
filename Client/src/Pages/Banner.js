@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import navHook from './nav';
+const BASE_URL = window.env.REACT_APP_BASE_URL;
 
 class Banner extends React.Component {
     constructor(){
@@ -19,7 +20,8 @@ class Banner extends React.Component {
    // sessionStorage.setState('location', location);
 
     axios({
-        url: `http://localhost:5500/rest/${location}`,
+        // url: `http://localhost:5500/rest/${location}`,
+         url: `${BASE_URL}/rest/${location}`,
         method: 'get',
         headers: {'Content-Type': 'application/JSON'}
     })
