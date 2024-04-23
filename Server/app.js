@@ -25,7 +25,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const Port = process.env.PORT ||4000;
+const Port = 5500;
 const hostname = "localhost";
 const paymentRoute = require("./Controller/payment");
 const  authRoute = require("./Controller/auth");
