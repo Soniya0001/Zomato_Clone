@@ -16,7 +16,7 @@ const Route = require("./Route/index");
 // };
 const corsOptions = {
    // origin: ['http://localhost:3000'],
-     origin: 0.0.0.0,
+     origin: '0.0.0.0',
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     optionSuccessStatus: 200,
