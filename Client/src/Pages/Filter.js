@@ -3,6 +3,7 @@ import axios from 'axios';
 import navHook from './nav';
 import queryString from 'query-string';
 import '../Styles/filterpage.css';
+const BASE_URL = window.env.REACT_APP_BASE_URL;
 
 class Filter extends React.Component {
     constructor() {
@@ -27,7 +28,7 @@ class Filter extends React.Component {
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${BASE_URL}/filter`,
             method: 'post',
             headers: { 'Content-Type': 'application/JSON' },
             data: filterObj
@@ -39,7 +40,7 @@ class Filter extends React.Component {
 
         //mealtype
         axios({
-            url: `http://localhost:5500/meal/${int}`,
+            url: `${BASE_URL}/meal/${int}`,
             method: 'get',
             headers: { 'Content-Type': 'application/JSON' }
         })
@@ -50,7 +51,7 @@ class Filter extends React.Component {
 
         // GET location API
         axios({
-            url: 'http://localhost:5500/location',
+            url: `${BASE_URL}/location`,
             method: 'get',
             headers: { 'Content-Type': 'application/JSON' }
         })
@@ -78,7 +79,7 @@ class Filter extends React.Component {
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${BASE_URL}/filter`,
             method: 'post',
             headers: { 'Content-Type': 'application/JSON' },
             data: filterObj
@@ -112,7 +113,7 @@ class Filter extends React.Component {
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${BASE_URL}/filter`,
             method: 'post',
             headers: { 'Content-Type': 'application/JSON' },
             data: filterObj
@@ -138,7 +139,7 @@ class Filter extends React.Component {
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${BASE_URL}/filter`,
             method: 'post',
             headers: { 'Content-Type': 'application/JSON' },
             data: filterObj
@@ -164,7 +165,7 @@ class Filter extends React.Component {
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${BASE_URL}/filter`,
             method: 'post',
             headers: { 'Content-Type': 'application/JSON' },
             data: filterObj
@@ -190,7 +191,7 @@ class Filter extends React.Component {
         }
 
         axios({
-            url: 'http://localhost:5500/filter',
+            url: `${BASE_URL}/filter`,
             method: 'POST',
             headers: { 'Content-Type': 'application/JSON'},
             data: filterObj
