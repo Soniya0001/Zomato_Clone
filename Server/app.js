@@ -47,10 +47,7 @@ app.use('/api/payment/',paymentRoute);
 app.use('/auth',authRoute);
 
 const mongoAtlas = "mongodb+srv://soniyasigroha001:hMJrPlfvBwwZrrn9@cluster0.knnmjxx.mongodb.net/SampleDB?retryWrites=true&w=majority&appName=Cluster0"
-mongoose.connect(mongoAtlas,{
-    useNewUrlParser : true,
-    useUnifiedTopology : true
-})
+mongoose.connect(mongoAtlas)
 .then(res => {
     app.listen(Port, hostname,() =>{
         console.log(`Server is running at ${hostname}:${Port}`)
