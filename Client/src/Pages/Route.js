@@ -13,7 +13,7 @@ const Router = () => {
     useEffect(() => {
         const getUser = () => {
          // fetch(`${BASE_URL}/auth/login/success`, {
-            fetch(`http://localhost:5500/auth/login/success`, {
+            fetch(`https://zomato-clone-backend-r5e6.onrender.com/auth/login/success`, {
                 method: "GET",
                 credentials: "include",
                 headers: {
