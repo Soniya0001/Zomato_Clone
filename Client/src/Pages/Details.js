@@ -104,7 +104,7 @@ initPayment = (data) =>{
         handler: async(response) =>{
             try{
                 // const verifyLink = `${BASE_URL}/api/payment/verify`;
-                 const verifyLink = `https://zomato-back.onrender.com/api/payment/verify`,
+                 const verifyLink = `https://zomato-back.onrender.com/api/payment/verify`;
                 const { data } = await axios.post(verifyLink, response );
 
             }catch(error) {
