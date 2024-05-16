@@ -20,7 +20,7 @@ class Banner extends React.Component {
    // sessionStorage.setState('location', location);
 
     axios({
-        url: `http://localhost:5500/rest/${location}`,
+        url: `https://zomato-clone-backend-r5e6.onrender.com/rest/${location}`,
         // url: `${BASE_URL}/rest/${location}`,
         method: 'get',
         headers: {'Content-Type': 'application/JSON'}
