@@ -29,7 +29,7 @@ class Filter extends React.Component {
 
         axios({
             // url: `${BASE_URL}/filter`,
-             url: `http://localhost:5500/filter`,
+             url: `https://zomato-clone-backend-r5e6.onrender.com/filter`,
             method: 'post',
             headers: { 'Content-Type': 'application/JSON' },
             data: filterObj
@@ -42,7 +42,7 @@ class Filter extends React.Component {
         //mealtype
         axios({
             // url: `${BASE_URL}/meal/${int}`,
-             urlhttp://localhost:5500/meal/${int}`,
+             url:`https://zomato-clone-backend-r5e6.onrender.com/meal/${int}`,
             method: 'get',
             headers: { 'Content-Type': 'application/JSON' }
         })
@@ -54,7 +54,7 @@ class Filter extends React.Component {
         // GET location API
         axios({
             // url: `${BASE_URL}/location`,
-             url: `http://localhost:5500/location`,
+             url: `https://zomato-clone-backend-r5e6.onrender.com/location`,
             method: 'get',
             headers: { 'Content-Type': 'application/JSON' }
         })
@@ -83,7 +83,7 @@ class Filter extends React.Component {
 
         axios({
             // url: `${BASE_URL}/filter`,
-            url: `http://localhost:5500/filter`,
+            url: `https://zomato-clone-backend-r5e6.onrender.com/filter`,
             method: 'post',
             headers: { 'Content-Type': 'application/JSON' },
             data: filterObj
@@ -118,7 +118,7 @@ class Filter extends React.Component {
 
         axios({
             // url: `${BASE_URL}/filter`,
-            url: `http://localhost:5500/filter`,
+            url: `https://zomato-clone-backend-r5e6.onrender.com/filter`,
             method: 'post',
             headers: { 'Content-Type': 'application/JSON' },
             data: filterObj
@@ -145,7 +145,7 @@ class Filter extends React.Component {
 
         axios({
             // url: `${BASE_URL}/filter`,
-            url: `http://localhost:5500/filter`,
+            url: `https://zomato-clone-backend-r5e6.onrender.com/filter`,
             method: 'post',
             headers: { 'Content-Type': 'application/JSON' },
             data: filterObj
@@ -172,7 +172,7 @@ class Filter extends React.Component {
 
         axios({
             // url: `${BASE_URL}/filter`,
-             url: `http://localhost:5500/filter`,
+             url: `https://zomato-clone-backend-r5e6.onrender.com/filter`,
             method: 'post',
             headers: { 'Content-Type': 'application/JSON' },
             data: filterObj
@@ -199,7 +199,7 @@ class Filter extends React.Component {
 
         axios({
             // url: `${BASE_URL}/filter`,
-             url: `http://localhost:5500/filter`,
+             url: `https://zomato-clone-backend-r5e6.onrender.com/filter`,
             method: 'POST',
             headers: { 'Content-Type': 'application/JSON'},
             data: filterObj
