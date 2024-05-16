@@ -4,7 +4,7 @@ import Banner from './Banner';
 import QuickSearch from './QuickSearch';
 import axios from 'axios';  //help in connecting to API's
 import Modal from 'react-modal';
-const BASE_URL = window.env.REACT_APP_BASE_URL;
+// const BASE_URL = window.env.REACT_APP_BASE_URL;
 
 const customStyles = {
     overlay:{
@@ -33,7 +33,8 @@ class Homepage extends React.Component {
   componentDidMount(){
     //location API
     axios({
-         url: `${BASE_URL}/location`,
+         // url: `${BASE_URL}/location`,
+        url: `https://zomato-back.onrender.com/location`,
         method: 'get',
         headers: {'Content-Type': 'application/JSON'}
     })
@@ -44,7 +45,8 @@ class Homepage extends React.Component {
 
 //Mealtype API
         axios({
-            url: `${BASE_URL}/mealtype`,
+            // url: `${BASE_URL}/mealtype`,
+             url: https://zomato-back.onrender.com/mealtype`,
             method: 'get',
             headers: {'Content-Type': 'application/JSON'}
         })
