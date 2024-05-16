@@ -42,7 +42,7 @@ class Details extends React.Component {
         // console.log(restaurant);
 
         axios({
-            url: `http://localhost:5500/restaurants/${restuarant}`,
+            url: `https://zomato-clone-backend-r5e6.onrender.com/restaurants/${restuarant}`,
             method: 'get',
             headers: { 'Content-Type': 'application/JSON' }
         })
@@ -58,7 +58,7 @@ class Details extends React.Component {
 
         if (state == "menuModal" && value == true) {
             axios({
-                 url: http://localhost:5500/menu/${resId}`,
+                 url: `https://zomato-clone-backend-r5e6.onrender.com/menu/${resId}`,
                 // url: `${BASE_URL}/menu/${resId}`,
                 method: 'get',
                 headers: { 'Content-Type': 'application/JSON' }
@@ -104,7 +104,7 @@ initPayment = (data) =>{
         handler: async(response) =>{
             try{
                 // const verifyLink = `${BASE_URL}/api/payment/verify`;
-                 const verifyLink = `http://localhost:5500/api/payment/verify`;
+                 const verifyLink = `https://zomato-clone-backend-r5e6.onrender.com/api/payment/verify`;
                 const { data } = await axios.post(verifyLink, response );
 
             }catch(error) {
@@ -121,7 +121,7 @@ const { subtotal } = this.state;
 
 try{
 // const orderLink = `${BASE_URL}/api/payment/orders`;
-const orderLink = `http://localhost:5500/api/payment/orders`;
+const orderLink = `https://zomato-clone-backend-r5e6.onrender.com/api/payment/orders`;
 const { data } = await axios.post(orderLink, {amount: subtotal});
 
 this.initPayment(data.data);
