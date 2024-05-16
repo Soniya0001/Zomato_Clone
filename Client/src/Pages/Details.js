@@ -5,7 +5,7 @@ import Modal from "react-modal";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import '../Styles/detailsPage.css'
-const BASE_URL = window.env.REACT_APP_BASE_URL;
+// const BASE_URL = window.env.REACT_APP_BASE_URL;
 
 //styles for modal
 const customStyles = {
@@ -42,7 +42,7 @@ class Details extends React.Component {
         // console.log(restaurant);
 
         axios({
-            url: `${BASE_URL}/restaurants/${restuarant}`,
+            url: `https://zomato-back.onrender.com/restaurants/${restuarant}`,
             method: 'get',
             headers: { 'Content-Type': 'application/JSON' }
         })
@@ -58,7 +58,8 @@ class Details extends React.Component {
 
         if (state == "menuModal" && value == true) {
             axios({
-                url: `${BASE_URL}/menu/${resId}`,
+                 url: `https://zomato-back.onrender.com/menu/${resId}`,
+                // url: `${BASE_URL}/menu/${resId}`,
                 method: 'get',
                 headers: { 'Content-Type': 'application/JSON' }
             })
@@ -102,7 +103,8 @@ initPayment = (data) =>{
 
         handler: async(response) =>{
             try{
-                const verifyLink = `${BASE_URL}/api/payment/verify`;
+                // const verifyLink = `${BASE_URL}/api/payment/verify`;
+                 const verifyLink = `https://zomato-back.onrender.com/api/payment/verify`,
                 const { data } = await axios.post(verifyLink, response );
 
             }catch(error) {
@@ -118,7 +120,8 @@ handlePayment = async() =>{
 const { subtotal } = this.state;
 
 try{
-const orderLink = `${BASE_URL}/api/payment/orders`;
+// const orderLink = `${BASE_URL}/api/payment/orders`;
+const orderLink = `https://zomato-back.onrender.com/api/payment/orders`,
 const { data } = await axios.post(orderLink, {amount: subtotal});
 
 this.initPayment(data.data);
