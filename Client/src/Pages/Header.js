@@ -36,12 +36,12 @@ class Header extends React.Component {
 
     google = () => {
          // window.open(`${BASE_URL}/auth/google`, "_self");
-        window.open("https://zomato-clone-b.onrender.com/auth/google", "_self");
+        window.open("http://localhost:5500/auth/google", "_self");
     }
 
     logout = () => {
          // window.open(`${BASE_URL}/auth/logout`, "_self");
-        window.open("https://zomato-clone-b.onrender.com/auth/logout", "_self");
+        window.open("http://localhost:5500/auth/logout", "_self");
     };
 
     handleNameChange = (event) => {
@@ -60,7 +60,7 @@ class Header extends React.Component {
         const { name, email, password } = this.state
         e.preventDefault();
         // axios.post(`${BASE_URL}/signup`, { name, email, password })
-         axios.post(`https://zomato-clone-b.onrender.com/signup`, { name, email, password })
+         axios.post(`http://localhost:5500/signup`, { name, email, password })
             .then(result => console.log(result))
             .catch(err => console.log(err))
     };
@@ -69,7 +69,7 @@ class Header extends React.Component {
         const { name, email, password } = this.state
         e.preventDefault();
         // axios.post(`${BASE_URL}/login`, { email, password })
-          axios.post(`https://zomato-clone-b.onrender.com/login`, { email, password })
+          axios.post(`http://localhost:5500/login`, { email, password })
             .then(result => {
                 console.log(result)
                 if (result.data === "Success") {
