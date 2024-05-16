@@ -34,7 +34,7 @@ class Homepage extends React.Component {
     //location API
     axios({
          // url: `${BASE_URL}/location`,
-        url: `https://zomato-back.onrender.com/location`,
+        url: `https://zomato-clone-b.onrender.com/location`,
         method: 'get',
         headers: {'Content-Type': 'application/JSON'}
     })
@@ -46,7 +46,7 @@ class Homepage extends React.Component {
 //Mealtype API
         axios({
             // url: `${BASE_URL}/mealtype`,
-             url: `https://zomato-back.onrender.com/mealtype`,
+             url: `https://zomato-clone-b.onrender.com/mealtype`,
             method: 'get',
             headers: {'Content-Type': 'application/JSON'}
         })
