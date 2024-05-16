@@ -46,7 +46,7 @@ class Homepage extends React.Component {
 //Mealtype API
         axios({
             // url: `${BASE_URL}/mealtype`,
-             url: https://zomato-back.onrender.com/mealtype`,
+             url: `https://zomato-back.onrender.com/mealtype`,
             method: 'get',
             headers: {'Content-Type': 'application/JSON'}
         })
