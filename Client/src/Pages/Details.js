@@ -121,7 +121,7 @@ const { subtotal } = this.state;
 
 try{
 // const orderLink = `${BASE_URL}/api/payment/orders`;
-const orderLink = `https://zomato-back.onrender.com/api/payment/orders`,
+const orderLink = `https://zomato-back.onrender.com/api/payment/orders`;
 const { data } = await axios.post(orderLink, {amount: subtotal});
 
 this.initPayment(data.data);
