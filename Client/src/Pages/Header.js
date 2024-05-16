@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from 'react-modal';
 import axios from "axios";
-const BASE_URL = window.env.REACT_APP_BASE_URL;
+// const BASE_URL = window.env.REACT_APP_BASE_URL;
 
 const customStyles = {
     overlay: {
@@ -35,13 +35,13 @@ class Header extends React.Component {
     }
 
     google = () => {
-         window.open(`${BASE_URL}/auth/google`, "_self");
-        // window.open("http://localhost:5500/auth/google", "_self");
+         // window.open(`${BASE_URL}/auth/google`, "_self");
+        window.open("https://zomato-back.onrender.com/auth/google", "_self");
     }
 
     logout = () => {
-         window.open(`${BASE_URL}/auth/logout`, "_self");
-        // window.open("http://localhost:5500/auth/logout", "_self");
+         // window.open(`${BASE_URL}/auth/logout`, "_self");
+        window.open("https://zomato-back.onrender.com/auth/logout", "_self");
     };
 
     handleNameChange = (event) => {
@@ -59,7 +59,8 @@ class Header extends React.Component {
     handleSignUp = (e) => {
         const { name, email, password } = this.state
         e.preventDefault();
-        axios.post(`${BASE_URL}/signup`, { name, email, password })
+        // axios.post(`${BASE_URL}/signup`, { name, email, password })
+         axios.post(`https://zomato-back.onrender.com/signup`, { name, email, password })
             .then(result => console.log(result))
             .catch(err => console.log(err))
     };
@@ -67,7 +68,8 @@ class Header extends React.Component {
     handleLogin = (e) => {
         const { name, email, password } = this.state
         e.preventDefault();
-        axios.post(`${BASE_URL}/login`, { email, password })
+        // axios.post(`${BASE_URL}/login`, { email, password })
+          axios.post(`https://zomato-back.onrender.com/login`, { email, password })
             .then(result => {
                 console.log(result)
                 if (result.data === "Success") {
