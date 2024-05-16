@@ -12,7 +12,7 @@ const Router = () => {
 
     useEffect(() => {
         const getUser = () => {
-            fetch(`${BASE_URL}/auth/login/success`, {
+         fetch(`${BASE_URL}/auth/login/success`, {
                 method: "GET",
                 credentials: "include",
                 headers: {
