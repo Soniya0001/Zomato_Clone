@@ -21,7 +21,7 @@ class Banner extends React.Component {
 
     axios({
         // url: `http://localhost:5500/rest/${location}`,
-         url: `${BASE_URL}/rest/${location}`,
+        url: `${BASE_URL}/rest/${location}`,
         method: 'get',
         headers: {'Content-Type': 'application/JSON'}
     })
